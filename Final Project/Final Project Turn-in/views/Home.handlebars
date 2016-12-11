@@ -1,0 +1,19 @@
+
+<h2>Welcome to the NHL Database</h2>
+<fieldset>
+  <legend>Queries</legend>
+    <fieldset>
+    <legend>Team Goals Queries</legend>
+      <div>Enter a number and the query will display all team with more total goals than that in descending order:</div>
+      <div>Goals >: <input type="text" id = "points"></div>
+      <input type = "button" onclick= "teamGoals();" value="Run Query">
+      <span id = "QResults"></span>
+    </fieldset>
+  <fieldset>
+    <legend>Arena And Team Query</legend>
+    <div>This Query Selects the Team with the highest Average Attendance:</div>
+    <input type = "button" onclick= "highAttendance();" value="Run Query">
+    <span id = "QResults2"></span>
+  </fieldset>
+</fieldset>
+<script src = "/javascripts/DBHome.js"></script>

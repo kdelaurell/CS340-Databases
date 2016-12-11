@@ -1,0 +1,19 @@
+<script src = "/javascripts/EditConferenceButtons.js"></script>
+<table id = "t01">
+  <thead>
+    <th>Conference Id</th>
+    <th>Conference Name</th>
+    <th>Update Row</th>
+    <th>Delete Row</th>
+  </thead>
+<tbody>
+     {{#each results}}
+            <tr id = {{this.Conference_Id}}>
+                <td id = "Id{{this.Conference_Id}}">{{this.Conference_Id}}</td>
+                <td id = "Name{{this.Conference_Id}}">{{this.Conference_Name}}</td>
+                <td><input id ="EB{{this.Conference_Id}}" type = "button" class = "edit" value = "Update" onclick="editConference({{this.Conference_Id}});"></td>
+                <td><input type = "button" class = "delete" value = "Delete" onclick="deleteConference({{this.Conference_Id}});"></td>
+           </tr>
+      {{/each}}
+    </tbody>
+  </table>

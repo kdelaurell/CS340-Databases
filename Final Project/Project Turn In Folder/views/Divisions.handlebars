@@ -1,0 +1,21 @@
+<script src = "/javascripts/EditDivisionButtons.js"></script>
+<table id = "t01">
+  <thead>
+    <th>Division Id</th>
+    <th>Division Name</th>
+    <th>Conference Id</th>
+    <th>Update Row</th>
+    <th>Delete Row</th>
+  </thead>
+<tbody>
+     {{#each results}}
+            <tr id = {{this.Division_Id}}>
+                <td id = "id{{this.Division_Id}}">{{this.Division_Id}}</td>
+                <td id = "Name{{this.Division_Id}}">{{this.Division_Name}}</td>
+                <td id = "Conf{{this.Division_Id}}">{{this.Conf_Id}}</td>
+                <td><input id = "EB{{this.Division_Id}}" type = "button" class = "edit" value = "Update" onclick="editDivision({{this.Division_Id}});"></td>
+                <td><input type = "button" class = "delete" value = "Delete" onclick="deleteDivision({{this.Division_Id}});"></td>
+           </tr>
+      {{/each}}
+    </tbody>
+  </table>

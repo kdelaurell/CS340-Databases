@@ -1,0 +1,27 @@
+<script src = "/javascripts/EditTeamButtons.js"></script>
+<table id = "t01">
+  <thead>
+    <th>Team Id</th>
+    <th>Team Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Country</th>
+    <th>Division Id</th>
+    <th>Update Row</th>
+    <th>Delete Row</th>
+  </thead>
+<tbody>
+     {{#each results}}
+            <tr id = {{this.Team_Id}}>
+                <td id = "id{{this.Team_Id}}">{{this.Team_Id}}</td>
+                <td id = "TN{{this.Team_Id}}">{{this.Team_Name}}</td>
+                <td id = "TC{{this.Team_Id}}">{{this.Team_City}}</td>
+                <td id = "TS{{this.Team_Id}}">{{this.Team_State}}</td>
+                <td id = "TCo{{this.Team_Id}}">{{this.Team_Country}}</td>
+                <td>{{this.DivId}}</td>
+                <td><input id = "EB{{this.Team_Id}}" type = "button" class = "edit" value = "Update" onclick="editTeam({{this.Team_Id}});"></td>
+                <td><input type = "button" class = "delete" value = "Delete" onclick="deleteTeam({{this.Team_Id}});"></td>
+           </tr>
+      {{/each}}
+    </tbody>
+  </table>
